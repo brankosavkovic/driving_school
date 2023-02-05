@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+
+  img {
+    max-height: 70px;
+    @media (max-width: 480px) {
+      max-height: 40px;
+    }
+  }
+
+  &-hamburger {
+    display: none;
+    border: none;
+    background-color: $lightGray;
+    color: $primaryColor;
+    font-size: 2rem;
+    padding: 5px;
+    line-height: 1;
+    cursor: pointer;
+
+    @media (max-width: 480px) {
+      display: block;
+    }
+  }
+
+  &-menu {
+    position: relative;
+    @media (max-width: 480px) {
+      &:hover ul {
+        transform: scale(1);
+      }
+    }
+    ul {
+      display: flex;
+      gap: 50px;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: $gray;
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+        background-color: $white;
+        gap: 20px;
+        padding: 10px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50vw;
+        transform: scale(0);
+        transition: $transition;
+      }
+    }
+  }
+}

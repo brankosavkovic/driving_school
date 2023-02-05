@@ -1,0 +1,81 @@
+.contact {
+  .mixins {
+    border: 1px solid navy;
+    height: 400px;
+    @include flex($align: flex-start);
+
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    .box {
+      height: 200px;
+      width: 200px;
+      background-color: tomato;
+    }
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "name email phone"
+      "message message message"
+      "....... ..... submit";
+    gap: 10px;
+    width: 100%;
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "name name"
+        "email email"
+        "phone phone"
+        "message message"
+        "...... submit";
+    }
+  }
+
+  //   nasledjivanje
+  %inputTeaxtarea {
+    padding: 5px 10px;
+    outline: none;
+    transition: 0.4s ease;
+    border: none;
+    box-shadow: 0 0 5px $gray;
+    &:focus {
+      box-shadow: 0 0 5px $hoverColor;
+    }
+  }
+
+  input {
+    @extend %inputTeaxtarea;
+  }
+  textarea {
+    @extend %inputTeaxtarea;
+    resize: none;
+  }
+
+  [name="name"] {
+    grid-area: name;
+  }
+  [name="email"] {
+    grid-area: email;
+  }
+  [name="phone"] {
+    grid-area: phone;
+  }
+  [name="message"] {
+    grid-area: message;
+  }
+  .btn {
+    grid-area: submit;
+  }
+
+  ul {
+    margin-top: 20px;
+  }
+  i {
+    color: $primaryColor;
+    margin-right: 10px;
+  }
+}

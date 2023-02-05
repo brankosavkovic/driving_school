@@ -1,0 +1,17 @@
+.about-page {
+  iframe {
+    width: 100%;
+  }
+  ul {
+    margin-top: 20px;
+    li {
+      &::before {
+        content: "\f058";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: $primaryColor;
+        margin-right: 10px;
+      }
+    }
+  }
+}

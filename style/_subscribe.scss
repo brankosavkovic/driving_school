@@ -1,0 +1,34 @@
+.subscribe {
+  background: linear-gradient(rgba($black, 0.8), rgba($black, 0.8)),
+    url("../img/testimonial-bg-01.jpg");
+  background-attachment: fixed;
+  color: $white;
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    max-width: 900px;
+    margin: 30px auto 0;
+    gap: 5px;
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+
+    input {
+      outline: none;
+      background: transparent;
+      border: none;
+      border: 1px solid transparent;
+      border-bottom: 1px solid $white;
+      padding: 10px;
+      color: $white;
+      transition: $transition;
+      &::placeholder {
+        color: $lightGray;
+      }
+      &:focus {
+        border: 1px solid $white;
+        border-radius: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.teacher {
+  article {
+    margin-top: 30px;
+  }
+  .card {
+    text-align: center;
+    p {
+      font-size: 1.3rem;
+    }
+    a {
+      font-size: 2rem;
+      //   margin-right: 10px;
+      i {
+        color: $primaryColor;
+        transition: transform $transition;
+        &:hover {
+          transform: rotate(30deg);
+        }
+      }
+      //   &:last-child {
+      //     margin-right: 0px;
+      //   }
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

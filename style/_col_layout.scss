@@ -1,0 +1,27 @@
+.g-col {
+  &-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+[class*="g-col-"] {
+  display: grid;
+  gap: 30px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}

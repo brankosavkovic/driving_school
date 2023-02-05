@@ -1,0 +1,32 @@
+.card {
+  border: 1px solid $black;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &-horisontal {
+    flex-direction: row;
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+    img {
+      max-width: 300px;
+      width: 100%;
+      @media (max-width: 480px) {
+        max-width: unset;
+      }
+    }
+  }
+
+  &-body {
+    padding: 10px;
+    flex-grow: 1;
+  }
+  &-footer {
+    padding: 10px;
+    @media (max-width: 480px) {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Nunito+Sans:ital,wght@300;600;700&display=swap");
+/**************
+GLOBAL
+**************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.topbar {
+  background-color: #233785;
+  color: #ffffff;
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+
+.topbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.topbar ul li {
+  margin-right: 10px;
+  border-right: 1px solid #ffffff;
+  padding-right: 10px;
+}
+
+.topbar ul li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
+
+.topbar ul i {
+  margin-right: 5px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.navbar-menu ul {
+  display: flex;
+  gap: 50px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #808080;
+}

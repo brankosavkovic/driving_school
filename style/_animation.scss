@@ -1,0 +1,31 @@
+.slideInRight {
+  animation-name: inRight;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.02, 0.67, 1, 0.4);
+
+  @keyframes inRight {
+    from {
+      transform: translateX(50vw) rotateY(720deg);
+    }
+    to {
+      transform: translateX(0vw) rotateY(0);
+    }
+  }
+}
+
+.slideInLeft {
+  animation-name: inLeft;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.02, 0.67, 1, 0.4);
+
+  @keyframes inLeft {
+    from {
+      transform: translateX(-50vw) rotateY(720deg);
+      background-color: red;
+    }
+    to {
+      transform: translateX(0vw) rotateY(0);
+      background-color: $primaryColor;
+    }
+  }
+}
